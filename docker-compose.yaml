@@ -1,0 +1,12 @@
+services:
+  reflex-msal:
+    build: .
+    container_name: reflex-msal
+    restart: always
+    network_mode: "host"
+    environment:
+      - DEBUG=true
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID}
+
