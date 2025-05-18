@@ -16,5 +16,7 @@ handle @backend_routes {
 root * /srv
 route {
 	try_files {path} {path}/ /404.html
-	file_server
+	file_server {
+		disable_canonical_uris
+	}
 }
