@@ -8,7 +8,7 @@ source /app/.venv/bin/activate
 # Create frontend
 rm -rf /srv/*
 reflex init
-API_URL=http://localhost:8088 reflex export --loglevel debug --frontend-only --no-zip && mv .web/_static/* /srv/ && rm -rf .web
+API_URL=http://localhost:8088 reflex export --loglevel debug --frontend-only --no-zip && mv .web/build/client/* /srv/ && rm -rf .web
 
 export PYTHONUNBUFFERED=1
 
